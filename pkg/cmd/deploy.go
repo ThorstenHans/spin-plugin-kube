@@ -64,7 +64,7 @@ var deployCmd = &cobra.Command{
 func init() {
 	deployCmd.Flags().Int32VarP(&replicas, "replicas", "r", 2, "Number of replicas for the application")
 	deployCmd.Flags().StringVarP(&artifact, "from", "f", "", "Reference in the registry of the application")
-	deployCmd.Flags().StringVar(&spinAppExecutor, "executor", default_spin_app_executor, "The executor used to run the application")
+	deployCmd.Flags().StringVar(&spinAppExecutor, "executor", defaultSpinAppExecutor, "The executor used to run the application")
 	deployCmd.Flags().BoolVar(&dryRun, "dry-run", false, "only print the kubernetes manifest without deploying")
 
 	if err := deployCmd.MarkFlagRequired("from"); err != nil {

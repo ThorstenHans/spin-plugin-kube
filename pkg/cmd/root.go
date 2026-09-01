@@ -14,7 +14,7 @@ import (
 
 // global constants
 const (
-	default_spin_app_executor = "containerd-shim-spin"
+	defaultSpinAppExecutor = "containerd-shim-spin"
 )
 
 // global variables available to all sub-commands
